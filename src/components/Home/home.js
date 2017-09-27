@@ -16,11 +16,11 @@ handleSubmit(e){
 	
 	//this.setState({name: form.usern.value,number: form.number.value,message: form.message.value,email: form.email.value});
 	//alert(form.usern.value);
-	
+	// Ajax code to submit login values
+	/*
 	$.ajax({
 	 url:"http://localhost:8090/LifeLine/rest/hello/login",
 	 dataType: 'json',
-	 url: '/api/users',
       type: 'POST',
       data: {
         username: form.usern.value,
@@ -32,11 +32,12 @@ handleSubmit(e){
 		alert (data);
       }.bind(this),
       error: function(xhr, status, err) {
+		alert(data);
         console.error("http://localhost:8080/", status, err.toString());
       }.bind(this)
 	
 	});
-	
+	*/
   }
 
 
