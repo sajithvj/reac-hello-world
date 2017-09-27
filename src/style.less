@@ -1,0 +1,139 @@
+@primarycolor: #FF7F50;
+@color:#800080;
+@var: #fff;
+@dialogcolor:rgba(0, 0, 0, 0.57);
+@width:1.0;
+@height:1.0;
+@footer-height: 300px;  
+@footer-height-large: 250px;        //Larger width -> less height
+@footer-height-tablet: 350px;       //Smaller -> more height needed
+
+h1 {
+   color: @primarycolor;
+}
+
+h3 {
+   color: @color;
+}
+.style{
+	&:extend(.dialog);
+}
+
+.container{
+	background-color:@var;
+	h1{
+		font-size:25px;
+		color:@color;
+	}
+	p{
+		font-size:25px;
+		color:@color;
+	}
+	
+	
+	.myclass{
+		h1{
+		font-size:25px;
+		color:@color;
+		}
+		p{
+		font-size:25px;
+		color:~"green";
+		}
+	}
+	
+}
+.dialog{
+	background: rgba(0, 0, 0, 0.57);
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: percentage(@width);
+	height: percentage(@height);
+	p{
+		background: #e6dfc3;
+		border-radius: 2px;
+		box-shadow: 0 0 14px rgba(0, 0, 0, 0.24), 0 14px 28px rgba(0, 0, 0, 0.48);
+		min-width: 280px;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		font-size:25px;
+		color:@color;
+	}
+	a {
+    .fancy-text();
+    color: @color;
+    transition: all 225ms ease 0ms;
+
+    &:hover,
+    &:focus {
+        color: lighten(@var, 50%);
+    }
+	}
+
+	.fancy-text() {
+    font-family: 'Some fancy font';
+    font-style: italic;
+    font-weight: 700;
+	}	
+
+}
+.content{
+		padding: 5px;
+        font-size: 12px;
+        min-height: 300px;
+		margin-bottom: 10px;
+		}
+	.form-content{
+		&:extend(.content);
+        background: ~"#6288f1"; 
+		color:white;
+		
+		}
+	.contact-content{
+		&:extend(.content);
+        background: ~"#ffffff"; 
+		
+		
+		}
+footer, .footer-push { 
+    height: @footer-height;
+	background: #444;
+	color:#fff;
+} 		
+@media all{
+ input[type="text"],
+  input[type="email"],
+  textarea,
+  input[type="password"],
+  select{
+    outline:none;
+	padding:10px;
+	font-size:1em;
+	color:#555;
+	width:100%;
+	border:1px solid #E6E6E6;
+	margin-bottom: 10px;
+  }
+  input[type='submit'],button {
+    outline: none;
+    padding: .8em 3em;
+    font-size: 1em;
+    margin-top: 2.5em;
+    color: #fff;
+    background: #ea8116;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    transition: 0.5s all;
+}
+
+
+
+}
+
